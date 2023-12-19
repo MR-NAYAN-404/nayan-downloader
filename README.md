@@ -1,12 +1,12 @@
 ## Instalation :
 ```bash
-> npm i snapsave-downloader
+> npm i nayan-downloader
 ```
 
 ## Example
 ```js
-const { snapsave } = require("snapsave-downloader")
-let URL = await snapsave("https://www.instagram.com/tv/CdmYaq3LAYo/")
+const { ndown } = require("nayan-downloader")
+let URL = await ndown("https://www.instagram.com/tv/CdmYaq3LAYo/")
 console.log(URL)
 ```
 ## Output Example

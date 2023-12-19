@@ -1,26 +1,37 @@
 {
-  "name": "video-downloader-pro",
+  "name": "nayan-downloader",
   "version": "1.0.0",
-  "description": "Video Downloader Pro is a magic npm package helping you download any media content from any website all over the Net.",
-  "main": "index.js",
+  "description": "Fetch Url Downloads From Instagram & Facebook",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node src/test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alasim/video-downloader-pro.git"
+    "url": "git+https://github.com/alya-tok/snapsave-downloader.git"
   },
   "keywords": [
+    "instagram",
+    "downloader",
+    "media",
+    "link",
+    "photo",
     "video",
-    "downloader"
+    "fbdownload",
+    "picture",
+    "fbdownload",
+    "download",
+    "facebook",
+    "fbdown"
   ],
-  "author": "alasim",
-  "license": "ISC",
+  "author": "NAYAN",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alasim/video-downloader-pro/issues"
+    "url": "https://github.com/MR-NAYAN-404/nayan-downloader/issues"
   },
-  "homepage": "https://github.com/alasim/video-downloader-pro#readme",
+  "homepage": "https://github.com/MR-NAYAN-404/nayan-downloader#readme",
   "dependencies": {
-    "puppeteer": "^12.0.1"
+    "got": "^11.8.3",
+    "cheerio": "~1.0.0-rc.5"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "nayan-downloader",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch Url Downloads From Instagram & Facebook",
   "main": "src/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alya-tok/snapsave-downloader.git"
+    "url": "git+https://github.com/MR-NAYAN-404/nayan-downloader.git"
   },
   "keywords": [
     "instagram",

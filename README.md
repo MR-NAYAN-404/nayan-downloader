@@ -1,11 +1,11 @@
 ## Instalation :
 ```bash
-> npm i nayan-downloader
+> npm i nayan-media-downloader
 ```
 
-## Example
+## Example (fb & insta)
 ```js
-const { ndown } = require("nayan-downloader")
+const { ndown } = require("nayan-media-downloader")
 let URL = await ndown("https://www.facebook.com/100000959749712/posts/pfbid0288xi44nvodK9d7r3wf4LHeM3dtEsVghQXmz5t59axwz7KdLStYyg4qfvTVrAL27Ll/?app=fbl")
 console.log(URL)
 ```
@@ -42,5 +42,78 @@ console.log(URL)
             "shouldRender": true
         }
     ]
+}
+```
+## Example (TikTok)
+```js
+const { tikdown } = require("nayan-media-downloader")
+let URL = await tikdown("https://vt.tiktok.com/ZSNvs6h6o/")
+console.log(URL)
+```
+## Output Example (tikTok)
+```
+{
+    "developer": "MOHAMMAD NAYAN",
+    "devfb": "https://www.facebook.com/profile.php?id=100000959749712",
+    "devwp": "wa.me/+8801615298449",
+    "status": true,
+    "data": {
+        "author": {
+            "id": "7021670496278447110",
+            "unique_id": "rowdy__baby_212",
+            "nickname": "Rasel_official_97⚡",
+            "avatar": "https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/d673e8357d05f3599741c7c974ec3e9a~c5_300x300.jpeg?lk3s=45126217&x-expires=1704636000&x-signature=z2SNWwaql50uUONx2NIzt8Pn8GY%3D"
+        },
+        "view": 59711,
+        "comment": 628,
+        "play": 345065,
+        "share": 1728,
+        "download": 7666,
+        "duration": 19,
+        "title": "Kokhono asuk💐🥹 #rowdy__baby212 ",
+        "video": "https://v16m-default.akamaized.net/ad3c167bb8792b3693ecf372632b1ea2/6599b519/video/tos/alisg/tos-alisg-pve-0037c001/okyBYBAQ4wiBNE9UEPALXHEjZCIvGYWwL1iUb/?a=0&ch=0&cr=0&dr=0&lr=all&cd=0%7C0%7C0%7C0&cv=1&br=936&bt=468&bti=OUBzOTg7QGo6OjZAL3AjLTAzYCMxNDNg&cs=0&ds=6&ft=XE5bCqT0m7jPD12-NFzR3wUTV3yKMeF~O5&mime_type=video_mp4&qs=4&rc=ZzQzaDU3NWQzN2hlNmlkaUBpMzYzb3c5cnFncDMzODczNEAuLTI0L2A0XjUxYjVjL2A2YSNwYTNhMmRrYC5gLS1kMS1zcw%3D%3D&l=202401061416056062C3D543FE05F58BCB&btag=e00088000",
+        "audio": "https://sf16-ies-music-sg.tiktokcdn.com/obj/tiktok-obj/7314645119033936642.mp3"
+    }
+}
+```
+## Example (YouTube)
+```js
+const { ytdown } = require("nayan-media-downloader")
+let URL = await ytdown("https://youtu.be/aRSuyrZFu_Q?si=bsfzgeeGmRpsHqnF")
+console.log(URL)
+```
+## Output Example (youtube)
+```
+{
+    "developer": "MOHAMMAD NAYAN",
+    "devfb": "https://www.facebook.com/profile.php?id=100000959749712",
+    "devwp": "wa.me/+8801615298449",
+    "status": true,
+    "data": {
+        "title": "#black status#sad yt ariful#sad tiktok#short#2022🥀💔",
+        "author": "SAD YT ARIFUL",
+        "published": "vor 1 Jahr",
+        "picture": "https://img.youtube.com/vi/XriHHLCGbFI/hqdefault.jpg",
+        "video": "https://smvd-videos-downloader.ugo-code-studio.workers.dev/download?t=aHR0cHM6Ly9ycjMtLS1zbi1wNXFsc25kei5nb29nbGV2aWRlby5jb20vdmlkZW9wbGF5YmFjaz9leHBpcmU9MTcwNDU3MjU2OCZlaT1PR0taWmJHeklvUEk2ZHNQZzdDTzZBZyZpcD0yYTAyJTI1M0FjMjA2JTI1M0EzMDEyJTI1M0E5ODklMjUzQTE1MjElMjUzQTVjNjAlMjUzQTEwOGIlMjUzQWI5YzQmaWQ9by1BQ2E0RXJ5RGJQTTRRRjJmNUFlNnFZVlU0NTJtdUlVZGh6cmdvUlBxeVR3aSZpdGFnPTE4JnNvdXJjZT15b3V0dWJlJnJlcXVpcmVzc2w9eWVzJnhwYz1FZ1ZvMmFEU05RJTI1M0QlMjUzRCZtaD0tUiZtbT0zMSUyNTJDMjYmbW49c24tcDVxbHNuZHolMjUyQ3NuLWE1bWVrbjZsJm1zPWF1JTI1MkNvbnImbXY9dSZtdmk9MyZwbD01MSZzcGM9VVdGOWZ3TlJZQ1IyRFJORlNCUi12cC16S3BUR3RfWSZ2cHJ2PTEmc3ZwdWM9MSZtaW1lPXZpZGVvJTI1MkZtcDQmY25yPTE0JnJhdGVieXBhc3M9eWVzJmR1cj03LjQwNyZsbXQ9MTY5OTUzNjc5NTE5ODQ4NiZtdD0xNzA0NTUwMzg3JmZ2aXA9NCZmZXhwPTI0MDA3MjQ2JmM9QU5EUk9JRCZ0eHA9NjMxMDIyNCZzcGFyYW1zPWV4cGlyZSUyNTJDZWklMjUyQ2lwJTI1MkNpZCUyNTJDaXRhZyUyNTJDc291cmNlJTI1MkNyZXF1aXJlc3NsJTI1MkN4cGMlMjUyQ3NwYyUyNTJDdnBydiUyNTJDc3ZwdWMlMjUyQ21pbWUlMjUyQ2NuciUyNTJDcmF0ZWJ5cGFzcyUyNTJDZHVyJTI1MkNsbXQmc2lnPUFKZlFkU3N3UmdJaEFKM1I3dWt6VE5IM19wOWFaRnV2VHBpM2Vhc0FHdTVtc0JNVGxydGpJMEw2QWlFQXlUN2E1bnBjRld3OTVYUFNCOFRRV3ZOTTdzYkxtN01OblJ6Nll6LWtuaEElMjUzRCZsc3BhcmFtcz1taCUyNTJDbW0lMjUyQ21uJTI1MkNtcyUyNTJDbXYlMjUyQ212aSUyNTJDcGwmbHNpZz1BQU81VzRvd1JRSWhBTjNFS2M0Q0NWcC0zTzJVSFFpYWhEYlk3N0FzSVdxcnZqMEZFTU5OUzRma0FpQkFrbENURXNqeV9UNktaTDJQS2xHUnhjVW5neGFQN0JwZkU5a3k0TG9OWEElMjUzRCUyNTNEJmhvc3Q9cnIzLS0tc24tcDVxbHNuZHouZ29vZ2xldmlkZW8uY29t&filename=%23black+status%23sad+yt+ariful%23sad+tiktok%23short%232022%F0%9F%A5%80%F0%9F%92%94+%28smvd.app%29"
+    }
+}
+```
+## Example (Twitter)
+```js
+const { twitterdown } = require("nayan-media-downloader")
+let URL = await ndown("https://twitter.com/TeamAbhiSha/status/1743351410761019794?t=vms8wxcU0mQuhVxwGCHjFw&s=19")
+console.log(URL)
+```
+## Output Example (Twitter)
+```
+{
+    "developer": "MOHAMMAD NAYAN",
+    "devfb": "https://www.facebook.com/profile.php?id=100000959749712",
+    "devwp": "wa.me/+8801615298449",
+    "status": true,
+    "data": {
+        "HD": "https://video.twimg.com/ext_tw_video/1743351351898181632/pu/vid/avc1/810x720/gKWI2KEyLdRMQBFa.mp4?tag=12",
+        "SD": "https://video.twimg.com/ext_tw_video/1743351351898181632/pu/vid/avc1/404x360/dtDrE8AqyxXhoRhO.mp4?tag=12"
+    }
 }
 ```
